@@ -19,13 +19,13 @@ import accountManager from '../utils/account-manager';
  * @param {string} props.motto - 사용자의 좌우명 문자열
  * @param {Function} props.setEditDisplay - 프로필 모달에 표시할 컴포넌트를 변경하는 함수
  */
-const Profile = ({ imageURL, userName, email, motto, setEditDisplay }) => {
+const Profile = ({ imageURL, userName, email, motto }) => {
   const history = useHistory();
 
-  const onEditClick = () => {
-    // 프로필 수정 폼으로 모달 변경
-    setEditDisplay(true);
-  };
+  // const onEditClick = () => {
+  //   // 프로필 수정 폼으로 모달 변경
+  //   setEditDisplay(true);
+  // };
 
   const onLogout = () => {
     // 로그아웃 처리
@@ -48,9 +48,9 @@ const Profile = ({ imageURL, userName, email, motto, setEditDisplay }) => {
         </li>
       </ul>
       <footer className={styles.footer}>
-        <Button styleName="profileModal" onClick={onEditClick}>
+        {/* <Button styleName="profileModal" onClick={onEditClick}>
           프로필 수정
-        </Button>
+        </Button> */}
         <GoogleLogoutButton onLogout={onLogout} />
       </footer>
     </>
