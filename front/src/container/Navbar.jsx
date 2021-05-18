@@ -6,7 +6,7 @@ import { CgToday } from 'react-icons/cg';
 import { BsCardChecklist } from 'react-icons/bs';
 import { AiFillSetting } from 'react-icons/ai';
 import { actionCreators } from '../store/store';
-import ProfileButon from '../components/ProfileButon';
+import ProfileButton from '../components/ProfileButton';
 import MenuSelector from '../components/MenuSelector';
 import IconButton from '../components/IconButton';
 import styles from '../styles/Navbar.module.css';
@@ -30,7 +30,7 @@ const Navbar = ({ imageURL, toggleProfileModal }) => {
     <nav className={styles.navbar}>
       <div className={styles.top}>
         <div>
-          <ProfileButon imageURL={imageURL} styleName="profile" onClick={onProfileClick} />
+          <ProfileButton imageURL={imageURL} styleName="profile" onClick={onProfileClick} />
         </div>
         <ul className={styles.menu}>
           <li className={styles.menuItem}>
